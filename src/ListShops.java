@@ -40,7 +40,6 @@ public class ListShops {
 
     @Override
     public String toString() {
-        return product +
-                ", количество товара=" + countProduct ;
+        return product + ";"+ countProduct ;
     }
 }

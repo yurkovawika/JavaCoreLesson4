@@ -16,31 +16,21 @@ final class Order {
     private int countProduct = 1;
 
 
-    public Order(Shopper shopper, Product product) {
-        this.ID = ++countID;
-        this.amount = amount;
-        this.shopper = Objects.requireNonNull(shopper);
-        addProducts(product);
-        this.date = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime());
-    }
 
     public Order(Shopper shopper, List<ListShops> listShops) {
+        this.shopper = shopper;
         this.listShops = listShops;
         this.ID = ++countID;
         this.amount = amount;
-        this.shopper = Objects.requireNonNull(shopper);
         this.date = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime());
-    }
-
-    public Order(Shopper shopper) {
-        this.ID = ++countID;
-        this.shopper = Objects.requireNonNull(shopper);
-        this.date = new SimpleDateFormat("dd.MM.yyyy").format(Calendar.getInstance().getTime());
-
     }
 
     public int getID() {
         return ID;
+    }
+
+    public Shopper getShopper() {
+        return shopper;
     }
 
     public ArrayList<Product> getProducts() {
@@ -70,10 +60,6 @@ final class Order {
     }
 
 
-    public Shopper getShopper() {
-        return shopper;
-    }
-
     public float sumShops() {
         float sumShops = 0;
         for (ListShops listShops1 : listShops) {
@@ -85,8 +71,8 @@ final class Order {
 
     @Override
     public String toString() {
-        return "Заказ № " + ID + "\n" + "Покупатель:" + shopper.getName() +
-                ", дата заказа:" + date + '\n' + listShops + "\nОбщая сумма покупок: " + sumShops();
+        return ID + ";" + shopper.getName() +
+                ";" + date + ';' + listShops + ";" + sumShops();
     }
 
 }

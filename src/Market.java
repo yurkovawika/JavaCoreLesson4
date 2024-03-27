@@ -44,26 +44,29 @@ final class Market {
                 product = str.split(";");
                 switch (type) {
                     case PRODUCT -> {
-                        list.add(new Product(Integer.parseInt(product[0]), String.format(product[1]), Integer.parseInt(product[2])));
+                        Product product1 = new Product( String.format(product[1]), Integer.parseInt(product[2]));
+                        list.add(product1);
                     }
 
                     case SHOPPER -> {
                         Shopper shopper = new Shopper(Integer.parseInt(product[0]), product[1], Integer.parseInt(product[2]),
-                                product[3],product[4].equals("m") ? Gender.MALE : Gender.FEMALE);
+                                product[3], product[4].equals("m") ? Gender.MALE : Gender.FEMALE);
                         list.add(shopper);
                     }
-                    case ORDER ->
-                            list.add(new Order((new Shopper(Integer.parseInt(product[0]), String.format(product[1]), Integer.parseInt(product[2]), String.format(product[3]), Gender.valueOf(product[4])))));
-
+                    case ORDER -> {
+                        //Order order = new Order((new Shopper(Integer.parseInt(product[0]), String.format(product[1]),
+                                //Integer.parseInt(product[2]), String.format(product[3]), Gender.valueOf(product[4]))));
+                        //list.add(order);
+                       // System.out.println(list);
+                        ///1;Вадим Коновалов;27.03.2024;Ручка;10;2;Точилка;6;3;38.0;
+                    }
                     default -> System.out.println("Некорректный тип");
                 }
             }
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден: " + e);
-        } catch (IOException e) {
-            System.out.println(e.getMessage());
-        } catch (NumberFormatException e) {
-            System.out.println("Ошибка при создании заказа. Незаполнены обязательные поля. Заказ отменён!");
+        } catch (IOException | NumberFormatException e) {
+            System.out.println(e);
         }
     }
 }

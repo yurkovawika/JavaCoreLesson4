@@ -14,9 +14,10 @@ final class Shopper extends NullPointerException {
         this.age = age;
         this.phone = phone;
         this.gender = gender;
-
-
     }
+
+
+
 
     public Shopper(int ID, String name, int age, String phone, Gender gender) {
 
@@ -55,7 +56,7 @@ final class Shopper extends NullPointerException {
 
     @Override
     public String toString() {
-        return "Покупатель: " + "ID " + ID + ", " + name + ", возраст: " + age +
-                ", телефон: " + phone + ", пол: " + gender + "\n";
+        return ID + ";" + name + ";" + age +
+                ";" + phone + ";" + gender;
     }
 }
