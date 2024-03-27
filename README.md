@@ -35,7 +35,7 @@
 #### Создан класс [ExportData](https://github.com/yurkovawika/JavaCoreLesson4/blob/master/src/ExportData.java), который содержит методы, для сохранения данных в файлы.
 ![1](https://github.com/yurkovawika/JavaCoreLesson4/assets/102153972/5923a8f9-8199-4017-8b76-94d5a241f8fe)
 
-#### Методы созданы для каждого класса одельно. Каждый метод открывает указываемый файл, и создаёт новый если такого нет.
+#### Методы созданы для каждого класса отдельно. Каждый метод открывает указываемый файл, и создаёт новый если такого нет.
 ![2](https://github.com/yurkovawika/JavaCoreLesson4/assets/102153972/d53add1c-b96c-4f46-bb8c-5feb40f13bbc)
 
 #### Напримере списка с продуктами. У нас уже есть некоторый список [products.txt](https://github.com/yurkovawika/JavaCoreLesson4/blob/master/products.txt)
@@ -44,7 +44,7 @@
 #### С помощью метода saveProduct() сохраняем два созданных продукта с одинаковым названием.
 ![5](https://github.com/yurkovawika/JavaCoreLesson4/assets/102153972/7756a27b-9406-4306-9c36-99c5c285fc9f)
 
-#### Метод отрабатывает успешно и добавляет только 1 позицию, так как названия совпадают
+#### Метод отрабатывает успешно и добавляет только 1 позицию, так как названия совпадают.
 ![4](https://github.com/yurkovawika/JavaCoreLesson4/assets/102153972/eb301989-ea22-4ef0-b6ff-1309681bf1e3)
 
 </details>
