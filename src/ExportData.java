@@ -51,7 +51,7 @@ public class ExportData {
         }
     }
 
-
+//методы для проверки дубликатов по иду и названию.
     public boolean getIdOrder(Order o) throws IOException {
         boolean id = true;
         try {
